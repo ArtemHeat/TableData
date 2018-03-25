@@ -1,0 +1,17 @@
+export const SMALL_DATA_LOAD = 'SMALL_DATA_LOAD';
+export const LARGE_DATA_LOAD = 'LARGE_DATA_LOAD';
+
+export const CHANGE_SEARCH = 'CHANGE_SEARCH';
+export const MAKE_SEARCH_QUERY = 'MAKE_SEARCH_QUERY';
+
+export const CHANGE_SORT_ORDER = 'CHANGE_SORT_ORDER';
+export const CHANGE_SORT_TYPE = 'CHANGE_SORT_TYPE';
+
+export const START = '_START';
+export const SUCCESS = '_SUCCESS';
+export const FAIL = '_FAIL';
+
+export const CHANGE_PAGE = 'CHANGE_PAGE';
+export const CHANGE_NUMBER_OF_PAGES = 'CHANGE_NUMBER_OF_PAGES';
+
+export const CHANGE_DETAILED_INFORMATION = 'CHANGE_DETAILED_INFORMATION';

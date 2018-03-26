@@ -17,22 +17,23 @@ export function makeSearchQuery(searchQuery) {
   }
 }
 
-export function changeSortType(sortType) {
+export function changeSortType(sortType, isAscending) {
   return {
     type: CHANGE_SORT_TYPE,
-    payload: { sortType }
+    payload: { sortType, isAscending },
+    debounce : 500
   }
 }
 
 export function changeSortOrder(isAscending) {
   return {
     type: CHANGE_SORT_ORDER,
-    payload: { isAscending }
+    payload: { isAscending },
+    debounce : 400
   }
 }
 
 export function smallDataLoad() {
-  console.log('small data loading');
   return {
     type: SMALL_DATA_LOAD,
     callAPI: 'http://www.filltext.com/?rows=32&id={number|1000}&firstName={firstName}&lastName={lastName}&email={email}&phone={phone|(xxx)xxx-xx-xx}&address={addressObject}&description={lorem|32}'

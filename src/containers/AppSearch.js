@@ -28,7 +28,7 @@ class AppSearch extends React.Component {
           value={this.props.searchValue}
           onChange={this.onSearchValueChange}
         />
-        <Button onClick={this.onSearchClick} >Найти</Button>
+        <Button onClick={this.onSearchClick} >Search</Button>
       </div>
     );
   }

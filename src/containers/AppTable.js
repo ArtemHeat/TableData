@@ -4,8 +4,10 @@ import AppTableHeader from './AppTableHeader';
 import AppTableRow from './AppTableRow';
 import Loader from './Loader';
 import ErrorMessage from './ErrorMessage';
-
 import {changeNumberOfPages, changeDetailedInf} from '../AC';
+
+// this.props.persons received from App.js
+// and already filtered in App.js according to the search query
 
 class AppTable extends React.Component {
   constructor(props) {
@@ -38,9 +40,6 @@ class AppTable extends React.Component {
       };
     }
   };
-
-  // this.props.persons received from App.js
-  // and filtered in App.js according to the search query
 
   componentDidUpdate() {
     const {changeNumberOfPages, persons} = this.props;

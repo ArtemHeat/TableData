@@ -28,7 +28,6 @@ class Paginator extends React.Component {
   render() {
     const {renderedPage, numberOfPages, persons} = this.props;
     const numbers = new Array(numberOfPages).fill(0).map((_, index) => index+1);
-    console.log('pages' + numberOfPages + '___renderedPage' + renderedPage);
     return(
       <div className="paginator-section">
         <b>Pages:</b>

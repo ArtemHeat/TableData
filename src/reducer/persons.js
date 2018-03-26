@@ -3,6 +3,7 @@ import {START, SUCCESS, FAIL, LARGE_DATA_LOAD, SMALL_DATA_LOAD} from '../constan
 const defaultState = {
   loading: false,
   loaded: false,
+  isLargeDataLoaded: false,
   persons: []
 }
 
@@ -11,18 +12,18 @@ export default (personsState = defaultState, action) => {
 
   switch (type) {
     case SMALL_DATA_LOAD + START:
-      return {...personsState, loading: true};
+      return {...personsState, loading: true, loaded: false, isLargeDataLoaded: false};
     case SMALL_DATA_LOAD + SUCCESS:
-      return {loading: false, loaded: true, persons: response};
+      return {...personsState, loading: false, loaded: true, isLargeDataLoaded: false, persons: response};
     case SMALL_DATA_LOAD + FAIL:
-      return {...personsState, loading: false, loaded: false, status};
+      return {...personsState, loading: false, loaded: false, isLargeDataLoaded: false, status};
 
     case LARGE_DATA_LOAD + START:
-      return {...personsState, loading: true};
+      return {...personsState, loading: true, loaded: false, isLargeDataLoaded: false};
     case LARGE_DATA_LOAD + SUCCESS:
-      return {loading: false, loaded: true, persons: response};
+      return {...personsState, loading: false, loaded: true, isLargeDataLoaded: true, persons: response};
     case LARGE_DATA_LOAD + FAIL:
-      return {...personsState, loading: false, loaded: false, status};
+      return {...personsState, loading: false, loaded: false, isLargeDataLoaded: false, status};
   };
 
   return personsState;

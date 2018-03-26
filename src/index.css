@@ -51,6 +51,11 @@ th button:hover {
   background: lightgray;
 }
 
+th button:active {
+  background: gray;
+  color: whitesmoke;
+}
+
 th button.descending::before {
   content: "";
   position: absolute;
@@ -63,6 +68,10 @@ th button.descending::before {
   background: none;
 }
 
+th button.descending:active::before {
+  border-top-color: whitesmoke;
+}
+
 th button.ascending::before {
   content: "";
   position: absolute;
@@ -73,6 +82,10 @@ th button.ascending::before {
   border-top-width: 0;
   border-bottom-color: black;
   background: none;
+}
+
+th button.ascending:active::before {
+  border-bottom-color: whitesmoke;
 }
 
 tbody tr {
